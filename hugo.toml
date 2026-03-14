@@ -1,3 +1,19 @@
 baseURL = 'https://bazinagykalilagzi.hu/'
 languageCode = 'hu-hu'
 title = 'Bazinagy Káli Lagzi'
+
+[[menu.main]]
+name = "Napirend"
+url = "/napirend"
+
+[[menu.main]]
+name = "Szállás lehetősége"
+url = "/szallas"
+
+[[menu.main]]
+name = "Étkeztetés"
+url = "/etkeztetes"
+
+[[menu.main]]
+name = "DressCode"
+url = "/dresscode"

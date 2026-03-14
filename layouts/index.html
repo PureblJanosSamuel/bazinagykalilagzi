@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ .Site.Title }}</title>
+</head>
+<body>
+    <h1 style="text-align: center;">{{ .Site.Title }}</h1>
+    <div style="text-align: center;">
+        {{ range .Site.Menus.main }}
+        <a href="{{ .URL }}" style="margin: 0 10px; display: inline-block;">{{ .Name }}</a>
+        {{ end }}
+    </div>
+</body>
+</html>
