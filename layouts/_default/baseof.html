@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
+    <style>
+        body { margin: 0; padding: 0; background-color: royalblue; color: white; }
+        header { padding: 0; }
+        h1 { margin: 0; color: white; }
+        .menu-link {
+            padding: 8px 16px;
+            background-color: darkblue;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin: 0 10px;
+            transition: background-color 0.3s;
+        }
+        .menu-link:hover {
+            background-color: rgba(0, 0, 139, 0.8);
+        }
+        img {
+            max-width: 66.67vw;
+            max-height: 66.67vh;
+            width: auto;
+            height: auto;
+            object-fit: contain;
+        }
+        @media (max-width: 768px) {
+            .menu-container { flex-direction: column; align-items: center; flex-wrap: wrap; }
+            .menu-box { width: 100%; max-width: 100%; box-sizing: border-box; margin: 0; padding: 0; border-radius: 0; }
+        }
+    </style>
+</head>
+<body>
+    <img src="/images/Untitled_Artwork.png" alt="Logo" style="position: absolute; top: 0; left: 0; z-index: 1; display: block;">
+    <header style="position: relative; padding: 0;">
+        <div class="menu-box" style="position: relative; z-index: 2; text-align: left; padding: 24px 16px; display: flex; flex-direction: column; justify-content: center; background-color: rgba(0, 0, 139, 0.2); border-radius: 5px; width: min(100%, 720px); margin: 20px auto 0;">
+            <h1 style="text-align: center;"><a href="/" style="text-decoration: none; color: inherit;">{{ .Site.Title }}</a></h1>
+            <div class="menu-container" style="margin-top: 20px; display: flex; flex-wrap: nowrap; justify-content: center; overflow-x: auto;">
+                {{ range .Site.Menus.main }}
+                <a href="{{ .URL }}" class="menu-link" style="margin: 5px 10px; white-space: nowrap;">{{ .Name }}</a>
+                {{ end }}
+            </div>
+        </div>
+    </header>
+    <div id="content" style="background-color: rgba(255, 255, 255, 0.3); border-radius: 50%; padding: 20px; width: fit-content; margin: 40px auto; box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);">
+        {{ block "main" . }}{{ end }}
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuLinks = document.querySelectorAll('.menu-link');
+            const homeLink = document.querySelector('h1 a');
+            const allLinks = [...menuLinks, homeLink];
+
+            allLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const url = this.getAttribute('href');
+                    fetch(url)
+                        .then(response => response.text())
+                        .then(html => {
+                            const parser = new DOMParser();
+                            const doc = parser.parseFromString(html, 'text/html');
+                            const newContent = doc.getElementById('content').innerHTML;
+                            document.getElementById('content').innerHTML = newContent;
+                            // Update title
+                            const newTitle = doc.querySelector('title').textContent;
+                            document.title = newTitle;
+                            // Update URL without reload
+                            history.pushState(null, '', url);
+                        })
+                        .catch(error => console.error('Error loading page:', error));
+                });
+            });
+
+            // Handle back/forward buttons
+            window.addEventListener('popstate', function() {
+                location.reload(); // Simple reload for back/forward
+            });
+        });
+    </script>
+</body>
+</html>
