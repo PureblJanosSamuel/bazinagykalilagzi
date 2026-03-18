@@ -18,11 +18,6 @@ url = "/szallas"
 weight = 3
 
 [[menu.main]]
-name = "Étkeztetés"
-url = "/etkeztetes"
+name = "Egyéb infók"
+url = "/egyeb-infok"
 weight = 4
-
-[[menu.main]]
-name = "DressCode"
-url = "/dresscode"
-weight = 5
