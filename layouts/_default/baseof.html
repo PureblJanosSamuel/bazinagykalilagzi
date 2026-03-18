@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Fr%C3%BChdienstem&display=swap" rel="stylesheet">
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
     <style>
-        body { margin: 0; padding: 0; background-color: royalblue; color: white; font-family: 'Courier Prime', monospace; }
+        body { margin: 0; padding: 0; background-color: royalblue; color: white; font-family: 'Courier New', monospace; }
         header { padding: 0; }
         h1 { margin: 0; color: white; }
         .menu-link {
@@ -22,30 +21,6 @@
         .menu-link:hover {
             background-color: rgba(0, 0, 139, 0.8);
         }
-        img {
-            max-width: 66.67vw;
-            max-height: 66.67vh;
-            width: auto;
-            height: auto;
-            object-fit: contain;
-        }
-        .background-image {
-            position: absolute;
-            top: 0;
-            left: 0;
-        }
-        @media (orientation: landscape) {
-            .background-image {
-                width: 100vw;
-                height: auto;
-            }
-        }
-        @media (orientation: portrait) {
-            .background-image {
-                width: auto;
-                height: 100vh;
-            }
-        }
         @media (max-width: 768px) {
             .menu-container { flex-direction: column; align-items: center; flex-wrap: wrap; }
             .menu-box { width: 100%; max-width: 100%; box-sizing: border-box; margin: 0; padding: 0; border-radius: 0; }
@@ -53,7 +28,6 @@
     </style>
 </head>
 <body>
-    <img src="/images/Untitled_Artwork.png" alt="Logo" class="background-image">
     <header style="position: relative; padding: 0;">
         <div class="menu-box" style="position: relative; z-index: 2; text-align: left; padding: 24px 16px; display: flex; flex-direction: column; justify-content: center; background-color: rgba(0, 0, 139, 0.2); border-radius: 5px; width: min(100%, 720px); margin: 20px auto 0;">
             <h1 style="text-align: center;"><a href="/" style="text-decoration: none; color: inherit;">{{ .Site.Title }}</a></h1>
