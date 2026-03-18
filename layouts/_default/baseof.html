@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ block "title" . }}{{ .Site.Title }}{{ end }}</title>
     <style>
-        body { margin: 0; padding: 0; background-color: royalblue; color: silver; font-family: 'Courier New', monospace; }
+        body { margin: 0; padding: 0; background-color: white; color: silver; font-family: 'Courier New', monospace; }
         header { padding: 0; }
         h1 { margin: 0; color: silver; }
         .menu-link {
@@ -31,8 +31,8 @@
 </head>
 <body>
     <header style="position: relative; padding: 0;">
-        <div class="menu-box" style="position: relative; z-index: 2; text-align: left; padding: 24px 16px; display: flex; flex-direction: column; justify-content: center; background-color: rgba(0, 0, 139, 0.2); border-radius: 5px; width: min(100%, 92vw); max-width: 940px; margin: 20px auto 0;">
-            <h1 style="text-align: center;"><a href="/" style="text-decoration: none; color: inherit;">{{ .Site.Title }}</a></h1>
+        <div class="menu-box" style="position: relative; z-index: 2; text-align: left; padding: 24px 16px; display: flex; flex-direction: column; justify-content: center; background-color: transparent; border-radius: 0; width: min(100%, 92vw); max-width: 940px; margin: 20px auto 0;">
+            <h1 style="text-align: center; margin: 0;"><a href="/" style="text-decoration: none; color: inherit; display: inline-block;"><img src="/images/Untitled_Artwork.png" alt="Logo" style="height: 3.12em; vertical-align: middle;"></a></h1>
             <div class="menu-container" style="margin-top: 20px; display: flex; flex-wrap: wrap; justify-content: center; overflow-x: visible; gap: 8px;">
                 {{ range .Site.Menus.main }}
                 <a href="{{ .URL }}" class="menu-link" style="margin: 5px 6px; white-space: nowrap;">{{ .Name }}</a>
