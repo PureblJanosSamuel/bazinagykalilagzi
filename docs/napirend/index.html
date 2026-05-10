@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Napirend - Matyi Sári házasodik</title>
+    <style>
+        body { margin: 0; padding: 0; background-color: white; color: silver; font-family: 'Courier New', monospace; }
+        header { padding: 0; }
+        h1 { margin: 0; color: silver; }
+        .menu-link {
+            padding: 8px 16px;
+            background-color: transparent;
+            color: silver;
+            text-decoration: none;
+            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            border-radius: 0;
+            display: inline-block;
+            margin: 0 10px;
+            transition: background-color 0.3s, border-color 0.3s;
+        }
+        .menu-link:hover {
+            background-color: rgba(0, 0, 139, 0.1);
+            border-color: rgba(0, 0, 139, 0.6);
+        }
+        @media (max-width: 768px) {
+            .menu-container { flex-direction: column; align-items: center; flex-wrap: wrap; }
+            .menu-box { width: 100%; max-width: 100%; box-sizing: border-box; margin: 0; padding: 0; border-radius: 0; }
+        }
+    </style>
+</head>
+<body>
+    <header style="position: relative; padding: 0;">
+        <div class="menu-box" style="position: relative; z-index: 2; text-align: left; padding: 24px 16px; display: flex; flex-direction: column; justify-content: center; background-color: transparent; border-radius: 0; width: min(100%, 92vw); max-width: 940px; margin: 20px auto 0;">
+            <h1 style="text-align: center; margin: 0;"><a href="/" style="text-decoration: none; color: inherit; display: inline-block;"><img src="/images/Untitled_Artwork.png" alt="Logo" style="height: 3.12em; vertical-align: middle;"></a></h1>
+            <div class="menu-container" style="margin-top: 20px; display: flex; flex-wrap: wrap; justify-content: center; overflow-x: visible; gap: 8px;">
+                
+                <a href="/" class="menu-link" style="margin: 5px 6px; white-space: nowrap;">Főoldal</a>
+                
+                <a href="/napirend" class="menu-link" style="margin: 5px 6px; white-space: nowrap;">Napirend</a>
+                
+                <a href="/szallas" class="menu-link" style="margin: 5px 6px; white-space: nowrap;">Szállás lehetősége</a>
+                
+                <a href="/egyeb-infok" class="menu-link" style="margin: 5px 6px; white-space: nowrap;">Egyéb infók</a>
+                
+            </div>
+        </div>
+    </header>
+    <div id="content" style="background-color: transparent; border-radius: 0; padding: 20px; width: fit-content; margin: 40px auto; box-shadow: none; font-size: 16px;">
+        <h1 style="text-align: center;">Napirend</h1>
+<div style="text-align: center;">
+<h1 id="napirend">Napirend</h1>
+<p>Itt lesz a napirend tartalma.</p>
+
+</div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuLinks = document.querySelectorAll('.menu-link');
+            const homeLink = document.querySelector('h1 a');
+            const allLinks = [...menuLinks, homeLink];
+
+            allLinks.forEach(link => {
+                link.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const url = this.getAttribute('href');
+                    fetch(url)
+                        .then(response => response.text())
+                        .then(html => {
+                            const parser = new DOMParser();
+                            const doc = parser.parseFromString(html, 'text/html');
+                            const newContent = doc.getElementById('content').innerHTML;
+                            document.getElementById('content').innerHTML = newContent;
+                            
+                            const newTitle = doc.querySelector('title').textContent;
+                            document.title = newTitle;
+                            
+                            history.pushState(null, '', url);
+                        })
+                        .catch(error => console.error('Error loading page:', error));
+                });
+            });
+
+            
+            window.addEventListener('popstate', function() {
+                location.reload(); 
+            });
+        });
+    </script>
+</body>
+</html>

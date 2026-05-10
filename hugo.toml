@@ -1,4 +1,5 @@
 baseURL = 'https://matyisarihazasodik.hu/'
+publishDir = 'docs'
 languageCode = 'hu-hu'
 title = 'Matyi Sári házasodik'
 
