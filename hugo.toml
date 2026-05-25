@@ -9,12 +9,12 @@ url = "/"
 weight = 1
 
 [[menu.main]]
-name = "Napirend"
+name = "Program"
 url = "/napirend"
 weight = 2
 
 [[menu.main]]
-name = "Szállás lehetősége"
+name = "Cím"
 url = "/szallas"
 weight = 3
 
