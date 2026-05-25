@@ -1,25 +1,32 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Matyi Sári házasodik</title>
+    <title>Főoldal on Matyi Sári házasodik</title>
     <link>https://matyisarihazasodik.hu/</link>
-    <description>Recent content on Matyi Sári házasodik</description>
+    <description>Recent content in Főoldal on Matyi Sári házasodik</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>hu-hu</language>
     <atom:link href="https://matyisarihazasodik.hu/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cím</title>
+      <link>https://matyisarihazasodik.hu/szallas/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      <guid>https://matyisarihazasodik.hu/szallas/</guid>
+      <description>Pontos cím Birkás mandulás Szentbékálla&#xA;Közlekedés Volánbuszjáratok: 7369, 7702, 7704, 7705, 7706, 7942.&#xA;Hazavinni a környékre tudunk, kérjük, jelezzétek előre Kismarjai Katánál!&#xA;Parkolási lehetőségek Temető melleti parkoló&#xA;Templom parkoló&#xA;Ingyenes parkoló</description>
+    </item>
     <item>
       <title>DressCode</title>
       <link>https://matyisarihazasodik.hu/dresscode/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://matyisarihazasodik.hu/dresscode/</guid>
-      <description>DressCode Itt lesz a dress code információk.</description>
+      <description>Kedves Meghívottak! Jól ismertek minket, tudjátok hogy messze áll tőlünk a kényszeredett elegancia. A helyszín sem felelne meg a kisestélyihez, ezért arra kérnénk benneteket hogy kényelmes, minél szabadabb ruhát válasszatok. Lányoknak, kérünk, minél színesebb, nyári ruhát, blúzt viseljetek, virágokért extra pont jár. Kérlek ne vegyetek magassarkú cipőt, mert a puha földben elsüllyed vele az ember. Fiúk, kérlek válasszátok ki a legszínesebb, legmintásabb ingeteket, és abban ünnepeljetek velünk.</description>
     </item>
     <item>
       <title>Egyéb infók</title>
       <link>https://matyisarihazasodik.hu/egyeb-infok/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://matyisarihazasodik.hu/egyeb-infok/</guid>
-      <description>Egyéb infók Étkeztetés Itt lesz az étkezés információk.&#xA;DressCode Itt lesz a dress code információk.</description>
+      <description>Nászajándék A legnagyobb ajándék számunkra, hogy eljöttök és Velünk ünnepeltek ezen a napon, ott ahol a közös jövőnket képzeljük el együtt. Ha Te is hozzájárulnál a jövőnk építéséhez, kérünk ajándékod borítékba rejtsd, majd a szertartás után kalapunkba tedd.&#xA;Dress code Jól ismertek minket, tudjátok hogy messze áll tőlünk a kényszeredett elegancia. A helyszín sem felelne meg a kisestélyihez, ezért arra kérnénk benneteket hogy kényelmes, minél szabadabb ruhát válasszatok. Lányoknak, kérünk, minél színesebb, nyári ruhát, blúzt viseljetek, virágokért extra pont jár.</description>
     </item>
     <item>
       <title>Étkeztetés</title>
@@ -29,18 +36,11 @@
       <description>Étkeztetés Itt lesz az étkezés információk.</description>
     </item>
     <item>
-      <title>Napirend</title>
+      <title>Program</title>
       <link>https://matyisarihazasodik.hu/napirend/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       <guid>https://matyisarihazasodik.hu/napirend/</guid>
-      <description>Napirend Itt lesz a napirend tartalma.</description>
-    </item>
-    <item>
-      <title>Szállás lehetősége</title>
-      <link>https://matyisarihazasodik.hu/szallas/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      <guid>https://matyisarihazasodik.hu/szallas/</guid>
-      <description>Szállás lehetősége Itt lesz a szállás információk.</description>
+      <description>16:00 Sátrazóknak sátorverés&#xA;17:00 Gyülekező, fogadás&#xA;18:00 Evangélikus szertartás a mandulásban&#xA;18:30 Faültetés&#xA;19:00 Gratuláció és ölelgetés, nászajándék kalapozás, vacsora kezdés&#xA;20:00 Koncert első felvonás&#xA;22:00 Koncert második felvonás&#xA;00:00 Tortavágás, játékok&#xA;01:00 Tánc az éjszakába</description>
     </item>
   </channel>
 </rss>

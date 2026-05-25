@@ -3,17 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Napirend - Matyi Sári házasodik</title>
+    <title>Program - Matyi Sári házasodik</title>
     <style>
-        body { margin: 0; padding: 0; background-color: white; color: silver; font-family: 'Courier New', monospace; }
+        body { margin: 0; padding: 0; background-color: white; color: #444; font-family: 'Courier New', monospace; }
         header { padding: 0; }
-        h1 { margin: 0; color: silver; }
+        h1 { margin: 0; color: #333; }
         .menu-link {
             padding: 8px 16px;
             background-color: transparent;
-            color: silver;
+            color: #444;
             text-decoration: none;
-            border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+            border-bottom: 2px solid rgba(0, 0, 0, 0.08);
             border-radius: 0;
             display: inline-block;
             margin: 0 10px;
@@ -23,12 +23,17 @@
             background-color: rgba(0, 0, 139, 0.1);
             border-color: rgba(0, 0, 139, 0.6);
         }
+         
+        .title-page #content { margin-top: 80px !important; line-height: 1.6; }
+         
+        .home-page #content { text-align: center; }
         @media (max-width: 768px) {
             .menu-container { flex-direction: column; align-items: center; flex-wrap: wrap; }
             .menu-box { width: 100%; max-width: 100%; box-sizing: border-box; margin: 0; padding: 0; border-radius: 0; }
         }
     </style>
 </head>
+
 <body>
     <header style="position: relative; padding: 0;">
         <div class="menu-box" style="position: relative; z-index: 2; text-align: left; padding: 24px 16px; display: flex; flex-direction: column; justify-content: center; background-color: transparent; border-radius: 0; width: min(100%, 92vw); max-width: 940px; margin: 20px auto 0;">
@@ -37,20 +42,27 @@
                 
                 <a href="/" class="menu-link" style="margin: 5px 6px; white-space: nowrap;">Főoldal</a>
                 
-                <a href="/napirend" class="menu-link" style="margin: 5px 6px; white-space: nowrap;">Napirend</a>
+                <a href="/napirend" class="menu-link" style="margin: 5px 6px; white-space: nowrap;">Program</a>
                 
-                <a href="/szallas" class="menu-link" style="margin: 5px 6px; white-space: nowrap;">Szállás lehetősége</a>
+                <a href="/szallas" class="menu-link" style="margin: 5px 6px; white-space: nowrap;">Cím</a>
                 
                 <a href="/egyeb-infok" class="menu-link" style="margin: 5px 6px; white-space: nowrap;">Egyéb infók</a>
                 
             </div>
         </div>
     </header>
-    <div id="content" style="background-color: transparent; border-radius: 0; padding: 20px; width: fit-content; margin: 40px auto; box-shadow: none; font-size: 16px;">
-        <h1 style="text-align: center;">Napirend</h1>
-<div style="text-align: center;">
-<h1 id="napirend">Napirend</h1>
-<p>Itt lesz a napirend tartalma.</p>
+    <div id="content" style="background-color: transparent; border-radius: 0; padding: 20px; width: min(100%, 92vw); max-width: 940px; box-sizing: border-box; margin: 40px auto; box-shadow: none; font-size: 16px;">
+        <h1 style="text-align: center;">Program</h1>
+<div style="text-align: left;">
+<p>16:00 Sátrazóknak sátorverés<br>
+17:00 Gyülekező, fogadás<br>
+18:00 Evangélikus szertartás a mandulásban<br>
+18:30 Faültetés<br>
+19:00 Gratuláció és ölelgetés, nászajándék kalapozás, vacsora kezdés<br>
+20:00 Koncert első felvonás<br>
+22:00 Koncert második felvonás<br>
+00:00 Tortavágás, játékok<br>
+01:00 Tánc az éjszakába</p>
 
 </div>
     </div>
@@ -74,6 +86,10 @@
                             
                             const newTitle = doc.querySelector('title').textContent;
                             document.title = newTitle;
+                            
+                            if (doc.body && doc.body.classList) {
+                                document.body.className = doc.body.className;
+                            }
                             
                             history.pushState(null, '', url);
                         })
