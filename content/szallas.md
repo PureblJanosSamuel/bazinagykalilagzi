@@ -18,4 +18,4 @@ Hazavinni a környékre tudunk, kérjük, jelezzétek előre Kismarjai Katánál
 
 [Ingyenes parkoló](https://maps.app.goo.gl/6jVGTpfx2EjNCoGd7)
 
-
+Kérünk mindenkit, hogy ha kocsival jön, vagy a szálláshelyen parkoljon, vagy pedig a mi általunk kijelölt parkolóhelyek egyikén! A falu utcáin kérlek ne parkoljatok, mert ez a falu lakóinak mindennapjait zavarhatja! A parkolóhelyek megtalálásában nagyon szívesen segítünk, lesz aki helyben irányítja a parkolást, ha pedig csak messzebb jutna hely, lesz egy segítőnk, aki fel tud hozni mindenkit.
